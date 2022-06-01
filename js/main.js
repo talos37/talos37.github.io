@@ -1,6 +1,6 @@
 ﻿function imageComparison(selector) {
 
-    let comparison = $(selector)
+    let comparison = (selector)
         .addClass('image-comparison')
         .prepend('<div class="image-comparison__before"></div>')
         .append('<button class="image-comparison__slider"></button>');
