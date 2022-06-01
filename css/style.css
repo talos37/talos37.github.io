@@ -1,0 +1,236 @@
+﻿*, *:after, *:before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+
+   
+}
+ul {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+   outline: none;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Montserrat";
+   font-weight: normal;
+   letter-spacing: 1px;
+}
+body {
+   font-family: "Montserrat";
+   font-size: 30px;
+   line-height: 1;
+   color: #373737;
+   overflow-y:hidden;
+   background-size: cover;
+}
+
+/* стилевой класс, который управляет шириной контейнера сетки*/
+.container {
+   margin: 0 auto;
+   max-width: 1633px;
+   padding: 0 15px;
+}
+
+
+.navigation {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.menu {
+}
+.logo {
+   margin-left: 29.3%;
+}
+.logo_png {
+   width: 50%;
+   height: 50%;
+}
+
+header {
+   width: 100%;
+   background: #e0deded5;
+   box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+   padding: 15px 0;
+   margin-bottom: 30px;
+   position: relative;
+   z-index: 2;
+}
+
+.main_text {
+   width: 50%;
+   background: #e0deded5;
+   box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+   padding: 15px 0;
+   margin-bottom: 30px;
+   position: absolute;
+   bottom: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 3;
+   display: flex;
+   justify-content: center;
+   font-size: 50px;
+}
+.about_text {
+   position: relative;
+   text-align: center;
+   z-index: 3;
+   display: flex;
+   font-size: 30px;
+   flex-direction: column;
+   align-items: center;
+   align-content: center;
+}
+.order_text {
+   position: relative;
+   text-align: left;
+   z-index: 3;
+   display: flex;
+   font-size: 30px;
+   right: 115px;
+   flex-direction: column;
+   align-items: center;
+   align-content: center;
+}
+.form-row {
+   position: relative;
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   right: 200px;
+}
+.form-control {
+   width: 1000px;
+}
+.form-group {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-content: center;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.515);
+   color: #ffffff;
+}
+.btn {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-content: center;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.515);
+   color: #ffffff;
+}
+.button_order {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-content: center;
+   align-items: center;
+   color: #ffffff;
+}
+.show_images img {
+   position: relative;
+   height: 20%;
+   width: 20%;
+   margin: 10px;
+}
+
+/* меню */
+#menu {
+   float: right;
+}
+#menu li {
+   display: inline-block;
+   margin-right: -10px;
+  
+}
+#menu a {
+   color: #111;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 600;
+   display: block;
+   line-height: 5px;
+   margin-top:5px;
+}
+#menu a:hover {
+   color: #EF5A42;
+}
+#menu li:last-child {
+   margin-right: 0;
+}
+
+
+
+
+/* СЛАЙДЕР */
+
+
+.image_comp {
+   position: fixed;
+}
+
+.image-comparison {
+   display: inline-block;
+   width: 520px;
+   width: 100%;
+   max-width: none;
+   height: 120vh;
+   position: absolute;
+   top: 0px;
+   left: 0;
+}
+
+.image-comparison__before {
+   position: absolute;
+   width: 50%;
+   overflow: hidden;
+}
+
+.image-comparison__image {
+   display: block;
+}
+
+/* Ползунок */
+.image-comparison__slider {
+   padding: 0;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 2px;
+   height: 100%;
+   cursor: col-resize;
+   outline: none;
+   border: none;
+}
+
+/* Стрелки */
+.image-comparison__slider::before {
+   content: '';
+   position: absolute;
+   top: calc(50% - 15px);
+   left: -14px;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: transparent url('./img/arrows.png') no-repeat center;
+   border: 2px solid #fff;
+   background-size: 90%;
+}
+
+.image-comprison__slider:hover,
+.image-comprison__slider:focus,
+.image-comprison__slider:hover::before,
+.image-comprison__slider:focus::before {
+   background-color: #ccc;
+   outline: none;
+   border: none;
+}
