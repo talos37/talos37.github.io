@@ -29,15 +29,17 @@
     <p>1. Заполните форму ниже.<br>2. Мы рассмотрим ваш запрос<br>3. Если запрос будет одобрен, мы вам перезвоним</p>
   </div>
 
-  <form>
+  <form name="order1">
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationDefault01">Имя</label>
-        <input type="text" class="form-control" id="validationDefault01" placeholder="Имя" value="" required>
+        <input name="Name" type="text" class="form-control" id="validationDefault01" placeholder="Имя" value=""
+          required>
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationDefault02">Фамилия</label>
-        <input type="text" class="form-control" id="validationDefault02" placeholder="Фамилия" value="" required>
+        <input name="Surname" type="text" class="form-control" id="validationDefault02" placeholder="Фамилия" value=""
+          required>
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationDefaultUsername">Электронная почта</label>
@@ -45,21 +47,24 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroupPrepend2">@</span>
           </div>
-          <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Электронная почта"
-            aria-describedby="inputGroupPrepend2" required>
+          <input name="Mail" type="text" class="form-control" id="validationDefaultUsername"
+            placeholder="Электронная почта" aria-describedby="inputGroupPrepend2" required>
         </div>
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationDefault03">Номер телефона</label>
-        <input type="text" class="form-control" id="validationDefault03" placeholder="Номер телефона" required>
+        <input name="Phone" type="text" class="form-control" id="validationDefault03" placeholder="Номер телефона"
+          required>
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationDefault04">Ваш автомобиль</label>
-        <input type="text" class="form-control" id="validationDefault04" placeholder="Полное название автомобиля" required>
+        <input name="Car" type="text" class="form-control" id="validationDefault04"
+          placeholder="Полное название автомобиля" required>
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationDefault05">Ваши требования</label>
-        <input type="text" class="form-control" id="validationDefault05" placeholder="Опишите ваши требования по восстановлению или реконструкции автомобиля" required>
+        <input name="Requirements" type="text" class="form-control" id="validationDefault05"
+          placeholder="Опишите ваши требования по восстановлению или реконструкции автомобиля" required>
       </div>
     </div>
     <div class="form-group">
@@ -71,11 +76,29 @@
       </div>
     </div>
     <div class="button_order">
-      <button class="btn btn-primary" type="submit">Отправить форму</button>
+      <button class="btn btn-primary" type="submit" onclick="Complete();">Отправить форму</button>
     </div>
   </form>
 
-
+  <script>
+    function Complete() {
+      var Elem = "Имя: " + document.order1.Name.value +
+        "\nФамилия: " + document.order1.Surname.value +
+        "\nЭлектронная почта: " + document.order1.Mail.value +
+        "\nНомер телефона: " + document.order1.Phone.value +
+        "\nВаш автомобиль: " + document.order1.Car.value +
+        "\nВаши требования: " + document.order1.Requirements.value;
+      console.log(
+        document.order1.Name.value +
+        document.order1.Surname.value +
+        document.order1.Mail.value +
+        document.order1.Phone.value +
+        document.order1.Car.value +
+        document.order1.Requirements.value
+      );
+      alert(Elem);
+    }
+  </script>
   <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/main.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
